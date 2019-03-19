@@ -33,22 +33,50 @@ Ansible 과정 실습 환경설정
 ### 4. Vagrant 사용법
 
 상태확인  
-> vagrant status  
+> vagrant status [VM]    
 
 시작  
-> vagrant up  
+> vagrant up [VM]  
 
 일시중지  
-> vagrant suspend  
+> vagrant suspend [VM]  
 
 재개  
-> vagrant resume  
+> vagrant resume [VM]  
 
 중지  
-> vagrant halt  
+> vagrant halt [VM]  
 
 삭제  
-> vagrant destroy
+> vagrant destroy [VM]  
 
 SSH 연결
-> vagrant ssh [host]
+> vagrant ssh [VM]  
+
+스냅샷 확인  
+> vagrant snapshot list [VM]  
+
+스냅샷 생성
+> vagrant snapshot save [VM]  <SNAP-NAME>  
+
+스냅샷 복구
+> vagrant snapshot restore [VM]  <SNAP-NAME>  
+
+공유폴더 동기화
+- 공유폴더 동기화는 Vagrantfile이 있는 현재 디렉토리와 VM의 /vagrant 파일이 기본 동기화 됨
+- 공유폴더 동기화가 되는 시점은 vagrant up 명령을 실행할 때만 동기화 됨
+> vagrant rsync [VM]  
+
+### 5. Playbook 작성을 위한 에디터 도구 팁
+
+#### 1) vi/vim
+.vimrc
+> autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+#### 2) ATOM
+[ATOM](https://atom.io)
+
+#### 3) Visual Studio Code
+[VSCODE](https://code.visualstudio.com)  
+또는
+> brew cask install visual-studio-code

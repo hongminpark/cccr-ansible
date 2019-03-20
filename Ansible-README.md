@@ -70,6 +70,7 @@ SSH 연결
 ### 5. Playbook 작성을 위한 에디터 도구 팁
 
 #### 1) vi/vim
+vim-enhanced 패키지 필요  
 .vimrc
 > autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 

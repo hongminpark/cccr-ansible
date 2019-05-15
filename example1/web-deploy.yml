@@ -3,17 +3,11 @@
   become: true
   hosts: web1
   tasks:
-    - name: Including variables
-      include_vars: var/vars.yml
-    - name: Installing Web Package
-      include: install.yml
-    - name: Copying Configuration File
-      include: template.yml
-    - name: Copying Web Contents
-      include: content.yml
-    - name: Start Web Service
-      include: service.yml mode=started
+    - include_vars: var/vars.yml
+    - include: install.yml
+    - include: template.yml
+    - include: content.yml
+    - include: service.yml mode=started
   handlers:
-    - name: Restart Web Service
-      include: service.yml mode=restarted
+    - include: service.yml mode=restarted
 

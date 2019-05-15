@@ -19,7 +19,7 @@ Ansible 과정 실습 환경설정
 ### 3. Vagrant
 
 #### 플러그인 설치  
-> vagrant plguin install vagrant-hostmanager
+> vagrant plugin install vagrant-hostmanager
 
 #### Box 이미지 다운로드
 > vagrant box add centos/7

@@ -1,3 +1,4 @@
-- copy:
+- name: Copying Web Contents
+  copy:
     src: "{{ web.file.content.src }}"
     dest: "{{ web.file.content.dst }}"
